@@ -78,6 +78,30 @@ body {
   }
 }
 
+
+
+
+.h1 {
+  @apply text-[#252525] dark:text-[#f4f4f4] leading-[48px] sm:text-[48px] sm:leading-[52px]  text-3xl font-medium tracking-tight sm:text-4xl xl:text-5xl;
+}
+
+.h2 {
+  @apply  text-[#252525]  dark:text-[#f4f4f4]  font-medium text-[2rem] leading-[2.625rem] sm:leading-[3rem]    sm:text-[2.25rem] md:text-[40px] md:leading-[50px];
+}
+
+.h3 {
+  @apply font-normal text-[1.75]  dark:text-[#f4f4f4]  leading-[2.5] sm:leading-[2.875]    sm:text-[2rem] md:text-3xl;
+}
+.h4 {
+  @apply text-[1.75rem] leading-[2.375rem] font-bold  dark:text-[#f4f4f4]  md:text-[2rem] md:leading-[2.75rem];
+}
+.h5 {
+  @apply  text-[18px]  leading-[24px] sm:leading-[28px]  dark:text-[#f4f4f4]  font-medium text-[#363636] sm:text-[20px]
+}
+
+.paragraph {
+  @apply text-base sm:text-lg md:text-xl dark:text-[#f4f4f4]  leading-relaxed;
+}
 @layer base {
   * {
     @apply border-border;
