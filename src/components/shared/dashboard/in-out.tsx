@@ -1,7 +1,15 @@
-
 import React from "react";
 
-
+// InOut component displays incoming and outgoing amounts in a horizontal layout
+// It shows two sections:
+// 1. "IN" amount with green background (#BBF7D0)
+// 2. "OUT" amount with red background (#FECACA)
+// Each section contains a label and dollar amount
+// The component uses Tailwind CSS for styling including:
+// - Flex layout with gaps between elements
+// - Responsive spacing (sm breakpoint)
+// - Rounded corners and padding on labels
+// - Semi-bold font weights
 const InOut = () => {
   return (
     <>

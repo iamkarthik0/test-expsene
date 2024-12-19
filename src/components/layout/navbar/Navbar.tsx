@@ -1,8 +1,9 @@
 // This component represents the main navigation bar of the application
 // It includes a sheet menu for mobile navigation, page title, theme toggle and user navigation
 
+import { getUser } from "@/app/actions/getUser";
 import { ModeToggle } from "./mode-toggle";
-import { SheetMenu } from "./sheet-menu"; 
+import { SheetMenu } from "./sheet-menu";
 import { UserNav } from "./user-nav";
 
 // Define props interface for the Navbar component
@@ -11,7 +12,8 @@ interface NavbarProps {
 }
 
 // Navbar component renders the top navigation bar with various controls
-export function Navbar({ title }: NavbarProps) {
+export async function Navbar({ title }: NavbarProps) {
+  const user = await getUser();
   return (
     // Header with sticky positioning and glass-like background effect
     <header className="sticky top-0 z-10 w-full bg-background/95 shadow backdrop-blur supports-[backdrop-filter]:bg-background/60 dark:shadow-secondary">
@@ -24,7 +26,12 @@ export function Navbar({ title }: NavbarProps) {
         {/* Right section with theme toggle and user menu */}
         <div className="flex flex-1 items-center justify-end">
           <ModeToggle /> {/* Light/dark theme toggle */}
-          <UserNav /> {/* User profile dropdown */}
+          <UserNav
+            email={user?.email}
+            name={user?.name}
+            image={user?.image}
+          />{" "}
+          {/* User profile dropdown */}
         </div>
       </div>
     </header>

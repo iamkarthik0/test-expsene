@@ -20,6 +20,7 @@ import {
   TooltipProvider,
 } from "@/components/ui/tooltip";
 import { CollapseMenuButton } from "./collapse-menu-button";
+import { handleSignOut } from "@/app/actions/signout";
 
 // Define props interface for the component
 interface MenuProps {
@@ -132,7 +133,9 @@ export function Menu({ isOpen }: MenuProps) {
               <Tooltip delayDuration={100}>
                 <TooltipTrigger asChild>
                   <Button
-                    onClick={() => {}}
+                    onClick={async () => {
+                      handleSignOut();
+                    }}
                     variant="outline"
                     className="w-full justify-center h-10 mt-5"
                   >

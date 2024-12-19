@@ -2,7 +2,7 @@
 // It includes a menu trigger button and a slide-out panel with navigation options
 
 import Link from "next/link";
-import { MenuIcon, PanelsTopLeft } from "lucide-react";
+import { MenuIcon } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 

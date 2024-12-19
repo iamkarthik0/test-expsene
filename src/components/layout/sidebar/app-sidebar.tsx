@@ -7,7 +7,6 @@
 import { Button } from "@/components/ui/button";
 import { useSidebar } from "@/hooks/use-sidebar";
 import { cn } from "@/lib/utils";
-import { PanelsTopLeft } from "lucide-react";
 import Link from "next/link";
 import { useStore } from "@/hooks/use-store";
 import { SidebarToggle } from "./sidebar-toggle";
