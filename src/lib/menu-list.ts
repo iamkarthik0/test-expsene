@@ -5,6 +5,7 @@ import {
     Camera,
     LucideIcon,
     Banknote,
+    CreditCard,
   } from "lucide-react";
   
   type Submenu = {
@@ -32,34 +33,38 @@ import {
         groupLabel: "",
         menus: [
           {
-            href: "/",
+            href: "/dashboard",
             label: "Expense",
             icon: Wallet,
             submenus: [],
           },
           {
-            href: "/users",
-            label: "My Account",
+            href: "/account",
+            label: "My Account", 
             icon: User,
           },
   
           {
-            href: "/users",
+            href: "/profit",
             label: "Profit Loss",
             icon: TrendingUp,
           },
           {
-            href: "/users",
+            href: "/snap",
             label: "Snap Receipts",
             icon: Camera,
           },
           {
-            href: "/users",
+            href: "/retire",
             label: "Retirement Planning",
             icon: Banknote,
+          },
+          {
+            href: "/pricing",
+            label: "Pricing",
+            icon: CreditCard,
           },
         ],
       },
     ];
   }
-  

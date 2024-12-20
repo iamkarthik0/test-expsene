@@ -73,15 +73,14 @@ export function Menu({ isOpen }: MenuProps) {
                           <TooltipTrigger asChild>
                             <Link
                               href={href}
-                              className={`w-full rounded-md px-4 flex cursor-pointer   h-10  gap-4 mb-3 hover:text-black hover:bg-[#F2F1EF] ${
-                                (active === undefined &&
-                                  pathname.startsWith(href)) ||
+                              className={`w-full rounded-md px-4 flex cursor-pointer h-10 gap-4 mb-3 hover:text-black hover:bg-[#F2F1EF] ${
+                                (active === undefined && pathname === href) ||
                                 active
                                   ? "bg-[#F2F1EF] text-black"
                                   : ""
                               }`}
                             >
-                              <div className="  flex items-center justify-center   ">
+                              <div className="flex items-center justify-center">
                                 <span
                                   className={cn(isOpen === false ? "" : "mr-4")}
                                 >
@@ -116,7 +115,7 @@ export function Menu({ isOpen }: MenuProps) {
                         label={label}
                         active={
                           active === undefined
-                            ? pathname.startsWith(href)
+                            ? pathname === href
                             : active
                         }
                         submenus={submenus}
