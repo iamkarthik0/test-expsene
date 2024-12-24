@@ -21,6 +21,7 @@ enum Plan {
 
 enum SubscriptionPeriod {
   MONTHLY
+  QUARTERLY
   YEARLY
 }
 
